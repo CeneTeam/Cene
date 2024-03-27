@@ -9,9 +9,12 @@ import { NativeStackNavigationProp } from '@react-navigation/native-stack'
 import { Image } from 'expo-image'
 import { LinearGradient } from 'expo-linear-gradient'
 import { useCallback } from 'react'
+import { useTranslation } from 'react-i18next'
 import { ScrollView, View } from 'react-native'
 
 const WelcomeScreen = () => {
+  const { t } = useTranslation()
+
   const navigation =
     useNavigation<NativeStackNavigationProp<RootStackParamList>>()
 
@@ -40,7 +43,7 @@ const WelcomeScreen = () => {
               lineHeight={39}
               styles={{ marginTop: 24, marginBottom: 24 }}
             >
-              See the world,{'\n'}one show at a time
+              {t('screens.welcome.title')}
             </Typography>
             <Typography
               color="white"
@@ -49,20 +52,20 @@ const WelcomeScreen = () => {
               lineHeight={24}
               styles={{ marginBottom: 48 }}
             >
-              Go to shows, meet people and just{'\n'}have fun
+              {t('screens.welcome.description')}
             </Typography>
             <ButtonComponent onPress={gotoSignup} color="ofWhite">
               <Typography color="text" weight="700" size={16}>
-                Sign up
+                {t('screens.welcome.signup')}
               </Typography>
             </ButtonComponent>
             <View style={styles.bottomView}>
               <Typography weight="600" size={14} color="white">
-                Have an account?
+                {t('screens.welcome.haveAnAccount')}
               </Typography>
               <ButtonComponent onPress={gotoLogin} variant="link">
                 <Typography size={14} weight="800" color="ofWhite" underline>
-                  Log in
+                  {t('screens.welcome.login')}
                 </Typography>
               </ButtonComponent>
             </View>
