@@ -7,6 +7,10 @@ export const colors = {
   text: '#1F1F1F',
   grey: '#A9A9A9',
   textGrey: '#7A7A7A',
+  inputBackground: '#151515',
+  inputText: '#DCDEE6',
+  labelColor: '#A5A5A5',
+  red: '#FF7070',
 }
 
 export const gradient = [

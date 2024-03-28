@@ -2,6 +2,7 @@ import ContainerComponent from '../../components/container/container.component'
 import IconButton from '../../components/iconButton/iconButton.component'
 import Steps from '../../components/steps/steps.component'
 import Typography from '../../components/typography/typography.component'
+import SignupForm from '../../forms/signup/signup.form'
 import { RootStackParamList } from '../../router/router'
 import { styles } from './signup.styles'
 import { useNavigation } from '@react-navigation/native'
@@ -36,6 +37,7 @@ const SignupScreen = () => {
           Start up an account
         </Typography>
         <Typography color="textGrey">Let’s get to know you</Typography>
+        <SignupForm />
       </ContainerComponent>
     </ScrollView>
   )
