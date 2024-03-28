@@ -18,6 +18,7 @@ const Button = ({
 }: IButton) => {
   return (
     <TouchableOpacity
+      activeOpacity={0.8}
       onPress={onPress}
       style={
         variant === 'button'

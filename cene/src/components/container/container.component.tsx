@@ -9,7 +9,11 @@ const Container = ({
   children: ReactNode
   style?: ViewStyle
 }) => (
-  <View style={[{ paddingLeft: 16, paddingRight: 16 }, style]}>{children}</View>
+  <View
+    style={[{ paddingLeft: 16, position: 'relative', paddingRight: 16 }, style]}
+  >
+    {children}
+  </View>
 )
 
 export default React.memo(Container)
